@@ -1,6 +1,7 @@
 import {ComponentConfig, Component} from './component';
 import {DOM} from '../dom';
 import {EventDispatcher, Event, NoArgs} from '../eventdispatcher';
+import {translate} from '../lang';
 
 /**
  * Configuration interface for a {@link Label} component.
@@ -36,7 +37,7 @@ export class Label<Config extends LabelConfig> extends Component<LabelConfig> {
       cssClass: 'ui-label',
     }, this.config);
 
-    this.text = this.config.text;
+    this.text = translate(this.config.text);
   }
 
   protected toDomElement(): DOM {

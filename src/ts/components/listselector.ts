@@ -1,6 +1,7 @@
 import {Component, ComponentConfig} from './component';
 import {EventDispatcher, Event} from '../eventdispatcher';
 import {ArrayUtils} from '../arrayutils';
+import {translate} from '../lang';
 
 /**
  * A map of items (key/value -> label} for a {@link ListSelector} in a {@link ListSelectorConfig}.
@@ -64,6 +65,7 @@ export abstract class ListSelector<Config extends ListSelectorConfig> extends Co
    * @param label the (human-readable) label of the item to add
    */
   addItem(key: string, label: string) {
+    label = translate(label);
     this.removeItem(key); // Try to remove key first to get overwrite behavior and avoid duplicate keys
     this.items.push({ key: key, label: label });
     this.onItemAddedEvent(key);
