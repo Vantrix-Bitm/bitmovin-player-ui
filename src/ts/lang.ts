@@ -1,4 +1,4 @@
-var lang = navigator.language.substr(0,2);
+var lang = navigator.language.substr(0, 2);
 
 var label_maps: { [label: string]: {[lang: string]: string}} = {
     'Video Quality': {
@@ -18,7 +18,7 @@ var label_maps: { [label: string]: {[lang: string]: string}} = {
         es: 'Qualidad de Audio',
     },
     'Subtitles': {
-        fr: 'Soustitres',
+        fr: 'Sous-titres',
         es: 'Subtitulos',
     },
     'Normal': {
@@ -26,12 +26,16 @@ var label_maps: { [label: string]: {[lang: string]: string}} = {
         es: 'Normal',
     },
     'auto': {
-        fr: 'automatique',
-        es: 'automático',
+        fr: 'Automatique',
+        es: 'Automático',
     },
     'off': {
-        fr: 'Aucunes',
-        es: 'apagado',
+        fr: 'Aucuns',
+        es: 'Apagado',
+    },
+    'Live': {
+        fr: 'En Direct',
+        es: 'En Vivo',
     },
 };
 

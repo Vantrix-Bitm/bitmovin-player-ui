@@ -58,6 +58,7 @@ export class Label<Config extends LabelConfig> extends Component<LabelConfig> {
    * @param text
    */
   setText(text: string) {
+    text = translate(text);
     this.text = text;
     this.getDomElement().html(text);
     this.onTextChangedEvent(text);

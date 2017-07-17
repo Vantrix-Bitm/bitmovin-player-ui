@@ -1,4 +1,5 @@
 /// <reference path='player.d.ts' />
+/// <reference path='require.d.ts' />
 import {UIManager, UIInstanceManager} from './uimanager';
 import {Button} from './components/button';
 import {ControlBar} from './components/controlbar';
